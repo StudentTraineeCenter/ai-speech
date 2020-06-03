@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text analytics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body style="text-align: center;">
+    <h2> Psali jste o: </h2>
+
+    <ul>
+    <br>
+    <% for(url of returnUrls)  { %>
+     <li>- <a class="wikiUrl" target="_blank" href="<%-url.url%>"><%- url.url.replace(/_/gi, " ").replace("https://en.wikipedia.org/wiki/", "") %> </a> </li>
+    <% } %>
+    </ul>
+    <form action="">
+        <div class="row">
+            <div class="input-field col s6 offset-s3 text-red">
+              <textarea placeholder="Váš text" name="txt" id="textarea1"></textarea>
+            </div>
+          </div>
+        <br>
+    <button type="submit" class="btn red">Analyzovat</button>
+    </form>
+    <div class="newText">
+        <%- returnText %>
+    </div>
+</body>
+<script>
+</script>
+</html>
