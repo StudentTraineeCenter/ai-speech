@@ -1,0 +1,16 @@
+{
+  "name": "ai-speech-editor",
+  "version": "0.0.1",
+  "private": false,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@azure/ai-text-analytics": "^1.0.0-preview.4",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "ejs": "^3.0.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3"
+  }
+}
