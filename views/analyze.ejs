@@ -18,7 +18,6 @@
      <li>- <a class="wikiUrl" target="_blank" href="<%-url.url%>"><%- url.url.replace(/_/gi, " ").replace("https://en.wikipedia.org/wiki/", "") %> </a> </li>
     <% } %>
     </ul>
-    <form action="">
         <div class="row">
             <div class="input-field col s6 offset-s3 text-red">
                 <table width="100%">
@@ -38,9 +37,10 @@
                       <td></td>
                       <td><button id="startRecognizeOnceAsyncButton">Začít nahrávání</button></td>
                     </tr>
+                    <form action="">
                     <tr>
                       <td align="right" valign="top">Výsledek</td>
-                      <td><textarea id="phraseDiv"></textarea></td>
+                      <td><textarea id="phraseDiv" name="txt"></textarea></td>
                     </tr>
                   </table>
                 </div>
