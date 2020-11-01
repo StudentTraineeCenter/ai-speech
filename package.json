@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": false,
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "echo 'No tests yet :('"
   },
   "dependencies": {
     "@azure/ai-text-analytics": "^1.0.0-preview.5",
