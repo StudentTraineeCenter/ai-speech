@@ -6,6 +6,8 @@
     <title>AI Editor Analysis</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="/css/styles.css">
+    <script src="assets/js/microsoft.cognitiveservices.speech.sdk.bundle.min.js" defer></script>
+    <script src="assets/js/process.js" defer></script>
 </head>
 <body style="text-align: center;">
     <h2> Mluvili jste o: </h2>
@@ -16,11 +18,32 @@
      <li>- <a class="wikiUrl" target="_blank" href="<%-url.url%>"><%- url.url.replace(/_/gi, " ").replace("https://en.wikipedia.org/wiki/", "") %> </a> </li>
     <% } %>
     </ul>
-    <form action="">
         <div class="row">
             <div class="input-field col s6 offset-s3 text-red">
-              <textarea placeholder="Váš text" name="txt" id="textarea1"></textarea>
-            </div>
+                <table width="100%">
+                    <tr>
+                      <td></td>
+                      <td><h1 style="font-weight:500;">Rozpoznání řeci pomocí Azure Speech to Text</h1></td>
+                    </tr>
+                    <tr>
+                      <td align="right">Subscription klíč:</td>
+                      <td><input id="subscriptionKey" type="text" size="40"></td>
+                    </tr>
+                    <tr>
+                      <td align="right">Zvolený region</td>
+                      <td><input id="serviceRegion" type="text" size="40" value="westus"></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td><button id="startRecognizeOnceAsyncButton">Začít nahrávání</button></td>
+                    </tr>
+                    <form action="">
+                    <tr>
+                      <td align="right" valign="top">Výsledek</td>
+                      <td><textarea id="phraseDiv" name="txt"></textarea></td>
+                    </tr>
+                  </table>
+                </div>
           </div>
         <br>
     <button type="submit" class="btn red">Analyzovat</button>
